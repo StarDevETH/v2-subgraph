@@ -63,10 +63,7 @@ export function findEthPerToken(token: Token): BigDecimal {
     return ONE_BD
   }
 
-  if (STABLECOINS.includes(token.id)) {
-    const bundle = Bundle.load('1')!
-    return safeDiv(ONE_BD, bundle.ethPrice)
-  }
+  // STABLECOINS array is empty, so skip this check
 
   // loop through whitelist and check if paired with any
   for (let i = 0; i < WHITELIST.length; ++i) {
