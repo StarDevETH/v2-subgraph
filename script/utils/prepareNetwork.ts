@@ -13,6 +13,7 @@ export enum NETWORK {
   ETHEREUM = 'ethereum',
   MATIC = 'matic',
   OPTIMISM = 'optimism',
+  SEPOLIA = 'sepolia-mainnet',
   SONEIUM = 'soneium-mainnet',
   UNICHAIN = 'unichain-mainnet',
   WORLDCHAIN = 'worldchain-mainnet',
