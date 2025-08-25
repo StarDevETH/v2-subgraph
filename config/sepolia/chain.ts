@@ -6,7 +6,7 @@ export const REFERENCE_TOKEN = '0xe6e4b15a831bfd84f0abe2aa90387b77eb06292f'
 export const STABLE_TOKEN_PAIRS = [
   '0xb4e16d0168e52d35cacd2c6185b44281ec28c9dc', // created 10008355
   '0x0d4a11d5eeaac28ec3f61d100daf4d40471f1852', // created block 10093341
-  '0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa', // created block 10100541
+  '0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa' // created block 10100541
 ]
 
 // token where amounts should contribute to tracked volume and liquidity
@@ -31,16 +31,16 @@ export const WHITELIST: string[] = [
   '0xa47c8bf37f92abed4a126bda807a7b7498661acd', // WUST
   '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984', // UNI
   '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599', // WBTC
-  '0x956f47f50a910163d8bf957cf5846d573e7f87ca', // FEI
+  '0x956f47f50a910163d8bf957cf5846d573e7f87ca' // FEI
 ]
 
 export const STABLECOINS = []
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps
-export const MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('400000')
+export const MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('0')
 
 // minimum liquidity for price to get tracked
-export const MINIMUM_LIQUIDITY_THRESHOLD_ETH = BigDecimal.fromString('2')
+export const MINIMUM_LIQUIDITY_THRESHOLD_ETH = BigDecimal.fromString('0')
 
 export class TokenDefinition {
   address: Address
@@ -54,38 +54,38 @@ export const STATIC_TOKEN_DEFINITIONS: TokenDefinition[] = [
     address: Address.fromString('0xe0b7927c4af23765cb51314a0e0521a9645f0e2a'),
     symbol: 'DGD',
     name: 'DGD',
-    decimals: BigInt.fromI32(9),
+    decimals: BigInt.fromI32(9)
   },
   {
     address: Address.fromString('0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9'),
     symbol: 'AAVE',
     name: 'Aave Token',
-    decimals: BigInt.fromI32(18),
+    decimals: BigInt.fromI32(18)
   },
   {
     address: Address.fromString('0xeb9951021698b42e4399f9cbb6267aa35f82d59d'),
     symbol: 'LIF',
     name: 'Lif',
-    decimals: BigInt.fromI32(18),
+    decimals: BigInt.fromI32(18)
   },
   {
     address: Address.fromString('0xbdeb4b83251fb146687fa19d1c660f99411eefe3'),
     symbol: 'SVD',
     name: 'savedroid',
-    decimals: BigInt.fromI32(18),
+    decimals: BigInt.fromI32(18)
   },
   {
     address: Address.fromString('0xbb9bc244d798123fde783fcc1c72d3bb8c189413'),
     symbol: 'TheDAO',
     name: 'TheDAO',
-    decimals: BigInt.fromI32(16),
+    decimals: BigInt.fromI32(16)
   },
   {
     address: Address.fromString('0x38c6a68304cdefb9bec48bbfaaba5c5b47818bb2'),
     symbol: 'HPB',
     name: 'HPBCoin',
-    decimals: BigInt.fromI32(18),
-  },
+    decimals: BigInt.fromI32(18)
+  }
 ]
 
 export const SKIP_TOTAL_SUPPLY: string[] = ['0x0000000000bf2686748e1c0255036e7617e7e8a5']

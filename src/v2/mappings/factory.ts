@@ -1,5 +1,5 @@
 /* eslint-disable prefer-const */
-import { log } from '@graphprotocol/graph-ts'
+import { BigInt, log } from '@graphprotocol/graph-ts'
 
 import { PairCreated } from '../../../generated/Factory/Factory'
 import { Bundle, Pair, PairTokenLookup, Token, UniswapFactory } from '../../../generated/schema'
@@ -44,7 +44,7 @@ export function handleNewPair(event: PairCreated): void {
     // bail if we couldn't figure out the decimals
     if (decimals === null) {
       log.debug('mybug the decimal on token 0 was null', [])
-      return
+      decimals = BigInt.fromI32(18) // default to 18 decimals
     }
 
     token0.decimals = decimals
@@ -67,7 +67,7 @@ export function handleNewPair(event: PairCreated): void {
 
     // bail if we couldn't figure out the decimals
     if (decimals === null) {
-      return
+      decimals = BigInt.fromI32(18) // default to 18 decimals
     }
     token1.decimals = decimals
     token1.derivedETH = ZERO_BD
