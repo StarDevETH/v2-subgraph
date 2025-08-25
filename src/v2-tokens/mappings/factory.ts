@@ -116,13 +116,19 @@ export function handleNewPair(event: PairCreated): void {
   factory.save()
 
   let pairLookup0 = new PairTokenLookup(
-    event.params.token0.toHexString().concat('-').concat(event.params.token1.toHexString())
+    event.params.token0
+      .toHexString()
+      .concat('-')
+      .concat(event.params.token1.toHexString())
   )
   pairLookup0.pair = pair.id
   pairLookup0.save()
 
   let pairLookup1 = new PairTokenLookup(
-    event.params.token1.toHexString().concat('-').concat(event.params.token0.toHexString())
+    event.params.token1
+      .toHexString()
+      .concat('-')
+      .concat(event.params.token0.toHexString())
   )
   pairLookup1.pair = pair.id
   pairLookup1.save()
